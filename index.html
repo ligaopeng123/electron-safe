@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>信息录入</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <script>
+        window.$ = window.jQuery = require('./js/jquery-3.0.0.min.js');
+        jQuery.isString = function (val) {
+            return typeof val === 'string';
+        };
+        jQuery.isUndefined = function (val) {
+            typeof val === 'undefined';
+        }
+
+        jQuery.isEmpty = function (val) {
+            typeof val === 'undefined' || val === '' || val.length === 0;
+        }
+        require('./js/bootstrap.min.js');
+    </script>
+    <style>
+        .input-group {
+            padding: 8px 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel panel-primary" style="width: 700px;margin: 6px">
+    <div class="panel-heading">部署配置</div>
+    <div class="panel-body" style="padding: 16px">
+        <div class="input-group">
+            <span class="input-group-addon">代码路径</span>
+            <input type="text" class="form-control" _name="代码路径" id="code_url" onblur="_onblur()">
+            <span class="input-group-addon">
+                <input id="forced_pull" type="checkbox" aria-label="...">
+                是否强制拉取？
+             </span>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">编译版本</span>
+            <select class="form-control" id="version" _name="编译版本"></select>
+            <span class="input-group-addon">
+                <input id="compile" type="checkbox" checked="checked" aria-label="...">
+                是否执行编译？
+             </span>
+        </div>
+        <div class="input-group" id="server_ip_group">
+            <span class="input-group-addon">服务器地址</br>服务器用户名、密码</br>部署地址</span>
+            <server-group>
+                <div class="server-group">
+                    <input type="text" class="form-control" _name="服务器地址" name="ip" style="width: 70%"
+                    >
+                    <input type="text" class="form-control" _name="服务器端口" name="port" style="width: 22.5%"
+                           value="22">
+                    <input class="form-control" style="width: 20%;" _name="服务器用户名" name="userName"
+                           type="text">
+                    <input class="form-control" style="width: 30%;" _name="服务器密码" name="password"
+                           type="text">
+                    <input class="form-control" style="width: 42.5%;" _name="部署地址" name="address"
+                           type="text">
+                    <button onclick="addServerGroup('server-group')" style="width: 7.5%;margin-top: -15px;"
+                            type="button"
+                            class="btn btn-default form-control"
+                            aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </server-group>
+        </div>
+        <div class="input-group">
+            <button type="button" style="margin-left: 543px" class="btn btn-default" onclick="_clear()">
+                清空
+            </button>
+            <button type="button" style="margin-left: 15px" class="btn btn-default" onclick="_submit()">
+                确定
+            </button>
+            <button type="button" style="margin-left: 15px" class="btn btn-default" onclick="_login()">
+                登录
+            </button>
+        </div>
+        <div id="info" class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span id="info_text">请关注此处的提示！</span>
+        </div>
+    </div>
+</div>
+<div style="display: none;" class="server-group" id="server-group">
+    <input type="text" class="form-control" _name="服务器地址" name="ip" style="width: 70%"
+    >
+    <input type="text" class="form-control" _name="服务器端口" name="port" style="width: 22.5%"
+           value="22">
+    <input class="form-control" style="width: 20%;" _name="服务器用户名" name="userName"
+           type="text">
+    <input class="form-control" style="width: 30%;" _name="服务器密码" name="password" type="text">
+    <input class="form-control" style="width: 42.5%;" _name="部署地址" name="address" type="text">
+    <button type="button" style="width: 7.5%;margin-top: -15px;" class="btn btn-default form-control"
+            aria-label="Left Align" onclick="delServerGroup(this)">
+        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+    </button>
+</div>
+
+<!-- You can also require other files to run in this process -->
+<script src="js/renderer.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        setAllValue();
+    }
+</script>
+</body>
+</html>
