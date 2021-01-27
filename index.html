@@ -52,37 +52,29 @@
 
         <div class="input-group">
             <span class="input-group-addon">证件类别</span>
-            <input type="text" class="form-control" _name="代码路径" id="codeId">
-            <span class="input-group-addon">
-                <input id="forced_pull" type="checkbox" aria-label="...">
-                是否强制拉取？
-             </span>
+            <label class="btn">
+                <input type="radio" name="options" id="option1" checked> 身份证
+            </label>
+            <label class="btn">
+                <input type="radio" name="options" id="option2">军官证
+            </label>
+            <label class="btn">
+                <input type="radio" name="options" id="option3"> 护照
+            </label>
         </div>
 
         <div class="input-group">
             <span class="input-group-addon">身份证号</span>
             <input type="text" class="form-control" _name="代码路径" id="codeId">
-            <span class="input-group-addon">
-                <input id="forced_pull" type="checkbox" aria-label="...">
-                是否强制拉取？
-             </span>
         </div>
         <div class="input-group">
             <span class="input-group-addon">籍贯</span>
             <select class="form-control" id="version" _name="编译版本"></select>
-            <span class="input-group-addon">
-                <input id="compile" type="checkbox" checked="checked" aria-label="...">
-                是否执行编译？
-             </span>
         </div>
 
         <div class="input-group">
             <span class="input-group-addon">现居住地</span>
             <input type="text" class="form-control" _name="代码路径" id="sex">
-            <!--<span class="input-group-addon">-->
-            <!--<input id="forced_pull" type="checkbox" aria-label="...">-->
-            <!--是否强制拉取？-->
-            <!--</span>-->
         </div>
 
         <div class="input-group">
@@ -99,12 +91,43 @@
 
         <div class="input-group">
             <span class="input-group-addon">症状</span>
-            <input type="text" class="form-control" _name="代码路径" id="sex">
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">发热
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">发力
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">持续干咳
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">呼吸困难
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">眼睛出现结膜炎症状
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">鼻赛、流涕、咽痛、腹泻
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">无以上症状
+            </label>
         </div>
 
         <div class="input-group">
             <span class="input-group-addon">药品登记</span>
-            <input type="text" class="form-control" _name="代码路径" id="sex">
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">发热药品
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">抗生素
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">感冒药品
+            </label>
+            <label class="form-check-label mg">
+                <input type="checkbox" class="form-check-input" value="">其他管控药品
+            </label>
         </div>
 
         <div class="input-group">
