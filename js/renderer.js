@@ -156,6 +156,15 @@ var callBack  = function (status) {
     }
 };
 
+var setSelect = function (id) {
+    $(`#${id}`).editableSelect({
+        bg_iframe: true,
+        case_sensitive: false,
+        items_then_scroll: 10 ,
+        isFilter:false
+    });
+}
+
 /**
  * 根据缓存设置所有输入框的值
  */

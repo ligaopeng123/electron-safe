@@ -20,6 +20,7 @@
         jQuery.isEmpty = function (val) {
             typeof val === 'undefined' || val === '' || val.length === 0;
         }
+        require('./js/jquery.editable-select');
         require('./js/bootstrap.min.js');
     </script>
     <style>
@@ -69,7 +70,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon">籍贯</span>
-            <select class="form-control" id="version" _name="编译版本"></select>
+             <select class="form-control wI" id="version" _name="编译版本"></select>
         </div>
 
         <div class="input-group">
@@ -130,16 +131,16 @@
             </label>
         </div>
 
-        <div class="input-group">
-            <button type="button" style="margin-left: 543px" class="btn btn-default" onclick="_clear()">
+        <div class="input-group c-bottom">
+            <button type="button"  class="btn btn-default" onclick="_clear()">
                 清空
             </button>
-            <button type="button" style="margin-left: 15px" class="btn btn-default" onclick="_submit()">
+            <button type="button" style="margin-left: 16px;" class="btn btn-default" onclick="_submit()">
                 确定
             </button>
-            <button type="button" style="margin-left: 15px" class="btn btn-default" onclick="_login()">
-                登录
-            </button>
+            <!--<button type="button" style="margin-left: 15px" class="btn btn-default" onclick="_login()">-->
+                <!--登录-->
+            <!--</button>-->
         </div>
         <div id="info" class="alert alert-info" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -152,7 +153,8 @@
 <script src="js/renderer.js"></script>
 <script type="text/javascript">
     window.onload = function () {
-        setAllValue();
+        // setAllValue();
+        setSelect(`version`);
     }
 </script>
 </body>
