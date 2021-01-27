@@ -193,7 +193,7 @@ var setAllValue = function () {
  */
 var isCheckbox = function (id) {
     var dom = document.getElementById(id);
-    if (dom.type === 'checkbox') {
+    if (dom && dom.type === 'checkbox') {
         return true;
     } else {
         return false;

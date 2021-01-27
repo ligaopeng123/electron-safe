@@ -1,0 +1,17 @@
+
+/*100%宽度*/
+.w {
+    width: 100%;
+}
+/*最小宽度*/
+.mw {
+    width: 700px;
+}
+
+.mg8 {
+    margin: 8px;
+}
+
+.pd16 {
+    padding: 16px;
+}
