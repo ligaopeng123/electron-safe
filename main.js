@@ -12,8 +12,8 @@ function createWindow() {
         width: 950,
         height: 750,
         show: false,
-        fullscreen: true,
-        backgroundColor: '#999',
+        fullscreen: true, // 默认全屏
+        backgroundColor: '#999', // 北京色 优化启动白屏
         webPreferences: {
             nodeIntegration: true,
             preload: path.join(__dirname, 'preload.js')
@@ -41,7 +41,9 @@ function createWindow() {
     // mainWindow.webContents.openDevTools()
 }
 
-if (true || app.isPackaged) Menu.setApplicationMenu(Menu.buildFromTemplate([{
+
+// 菜单设置
+Menu.setApplicationMenu(Menu.buildFromTemplate([{
     label: '设置',
     submenu: [
         { role: 'reload', label: '刷新' },
@@ -78,17 +80,22 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
 // 开机自启动
-// const exeName = path.basename(process.execPath);
-//
-// app.setLoginItemSettings({
-//     openAtLogin: true,
-//     openAsHidden:false,
-//     path: process.execPath,
-//     args: [
-//         '--processStart', `"${exeName}"`,
-//     ]
-// });
+if (app.isPackaged) {
+    const exeName = path.basename(process.execPath);
+
+    app.setLoginItemSettings({
+        openAtLogin: true,
+        openAsHidden:false,
+        path: process.execPath,
+        args: [
+            '--processStart', `"${exeName}"`,
+        ]
+    });
+}
+
 
 // 生成快捷方式
 if(require('electron-squirrel-startup')) return;
