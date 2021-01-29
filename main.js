@@ -89,3 +89,6 @@ app.on('activate', function () {
 //         '--processStart', `"${exeName}"`,
 //     ]
 // });
+
+// 生成快捷方式
+if(require('electron-squirrel-startup')) return;
