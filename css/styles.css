@@ -21,9 +21,25 @@
     padding: 16px;
 }
 
+.pbc {
+    background-color: #eee !important;
+}
+
 
 .c-bottom {
     margin-left: calc(100% - 125px);
+}
+
+.pd8 {
+    padding: 8px;
+}
+
+.mgb0 {
+    margin-bottom: 0px;
+}
+
+.input-group {
+    padding: 7px 0px !important;
 }
 
 
