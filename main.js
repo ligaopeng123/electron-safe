@@ -50,7 +50,8 @@ Menu.setApplicationMenu(Menu.buildFromTemplate([{
         { role: 'zoomIn', label: '放大' },
         { role: 'zoomOut' , label: '缩小'},
         { role: 'resetZoom' , label: '重置'},
-        { role: 'togglefullscreen',  label: '进入|退出全屏'}
+        { role: 'togglefullscreen',  label: '进入|退出全屏'},
+        { role: 'close',  label: '退出'}
     ]
 }]));
 
@@ -83,18 +84,18 @@ app.on('activate', function () {
 
 
 // 开机自启动
-if (app.isPackaged) {
-    const exeName = path.basename(process.execPath);
-
-    app.setLoginItemSettings({
-        openAtLogin: true,
-        openAsHidden:false,
-        path: process.execPath,
-        args: [
-            '--processStart', `"${exeName}"`,
-        ]
-    });
-}
+// if (app.isPackaged) {
+//     const exeName = path.basename(process.execPath);
+//
+//     app.setLoginItemSettings({
+//         openAtLogin: true,
+//         openAsHidden:false,
+//         path: process.execPath,
+//         args: [
+//             '--processStart', `"${exeName}"`,
+//         ]
+//     });
+// }
 
 
 // 生成快捷方式

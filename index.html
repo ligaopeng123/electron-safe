@@ -36,36 +36,23 @@
          style="background-image: none; color: rgb(51, 51, 51);text-align: center;
          border-color:#999;font-weight: bold;font-family: 微软雅黑, 黑体, 宋体;">信息录入</div>
     <div class="panel-body" style="padding: 16px">
-        <div class="left" style="width: calc(100% - 290px);">
+        <div class="left" style="width: calc(100% - 90px);">
+
             <div class="input-group">
                 <span class="input-group-addon">姓名</span>
-                <input type="text" class="form-control" _name="代码路径" id="name">
-                <!--<span class="input-group-addon">-->
-                <!--<input id="forced_pull" type="checkbox" aria-label="...">-->
-                <!--是否强制拉取？-->
-                <!--</span>-->
-            </div>
-
-            <div class="input-group">
+                <input type="text" class="form-control" _name="代码路径" id="name" style="width: 100%">
                 <span class="input-group-addon">性别</span>
-                <input type="text" class="form-control" _name="代码路径" id="sex">
-                <!--<span class="input-group-addon">-->
-                <!--<input id="forced_pull" type="checkbox" aria-label="...">-->
-                <!--是否强制拉取？-->
-                <!--</span>-->
+                <select  class="form-control" id="exampleFormControlSelect2">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
             </div>
 
-            <div class="input-group">
-                <span class="input-group-addon">证件类别</span>
-                <label class="btn">
-                    <input type="radio" name="options" id="option1" checked> 身份证
-                </label>
-                <label class="btn">
-                    <input type="radio" name="options" id="option2">军官证
-                </label>
-                <label class="btn">
-                    <input type="radio" name="options" id="option3"> 护照
-                </label>
+
+            <div class="input-group" style="height: 100px;">
+                <span class="input-group-addon">照片/健康宝</span>
+                <img class="form-control mlr" src="./img/name.png" style="border: 1px;height: 100%;width: auto;" />
+                <img class="form-control mlr" src="./img/name.png" style="border: 1px;height: 100%;width: auto;" />
             </div>
 
             <div class="input-group">
@@ -96,27 +83,32 @@
 
             <div class="input-group">
                 <span class="input-group-addon">症状</span>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">发热
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">发力
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">持续干咳
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">呼吸困难
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">眼睛出现结膜炎症状
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">鼻赛、流涕、咽痛、腹泻
-                </label>
-                <label class="form-check-label mg">
-                    <input type="checkbox" class="form-check-input" value="">无以上症状
-                </label>
+                <span class="form-control" style="min-width: 640px;">
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">发热
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">乏力
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">持续干咳
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">呼吸困难
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">结膜炎症状
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">鼻赛、流涕、咽痛、腹泻
+                    </label>
+                    <label class="form-check-label mg">
+                        <input type="checkbox" class="form-check-input" value="">无以上症状
+                    </label>
+                </span>
+                <span class="input-group-addon">体温</span>
+                <input type="text" class="form-control" _name="体温" name="ip" style="min-width: 62px">
+
             </div>
 
             <div class="input-group">
@@ -151,8 +143,11 @@
                 <span id="info_text">请关注此处的提示！</span>
             </div>
         </div>
-        <div class="right">
-            <div>退出登录?<a href="./login.html">返回登录</a></div>
+        <div class="right" style="width: 80px;">
+            <div style="width: 100%;margin: 0px;">退出登录?
+                </br><a href="./login.html">返回登录</a>
+            </div>
+        </div>
         </div>
     </div>
 </div>

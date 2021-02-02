@@ -11,8 +11,13 @@
     width: 700px;
 }
 .mg {
-    margin: 4px;
+    margin: 2px;
 }
+
+.mlr {
+    margin: 0 2px;
+}
+
 .mg8 {
     margin: 8px;
 }
